@@ -1,0 +1,16 @@
+<h1>包剪拳</h1>
+<%= form_tag games_path do |f| %>
+<%= select_tag 'user_input', options_for_select([['R','R'],['P','P'],['S','S']])  %>
+<%= submit_tag 'play' %>
+<% end %>
+<%= link_to 'clear', clear_path %>
+
+<ul>
+<% @games.each do |game| %>
+<li><%= game.result %></li>
+<% end %>
+</ul>
+
+
+
+
